@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get '/profile', to: "users#profile"
   post '/login', to: "auth#login"
   post '/signup', to:  "users#create"
-
+  get '/movies', to: "movie#index"
 
 end
