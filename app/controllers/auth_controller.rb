@@ -3,7 +3,8 @@ class AuthController < ApplicationController
   def login
   #params: { usermane; ', password ' '}
   #find the user by theri usernmae
-  user =User.find_by(username: params["username"])
+
+  user=User.find_by(username: params["username"])
   #authenticate the user(using BYCRYPT)
   #is_authenticated = user.authenticate(params["password"])
   is_authenticated = user.authenticate(params["password"])

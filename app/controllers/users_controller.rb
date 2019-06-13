@@ -11,12 +11,10 @@ class UsersController < ApplicationController
     else
       render json: { error: users.errors.full_messages}
     end
+  end
 
-    def profile
-      User.find(user_id)
-      render json: user
-    end
-
+  def profile
+    render json: current_user1
   end
 
   private
