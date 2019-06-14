@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 #[ara]
-
   def create
     user=User.create(user_params)
     is_valid = user.valid?
@@ -13,7 +12,9 @@ class UsersController < ApplicationController
     end
   end
 
+# make changes
   def profile
+
     render json: current_user1
   end
 
