@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/profile', to: "users#profile"
   post '/login', to: "auth#login"
   post '/signup', to:  "users#create"
-  get '/movies', to: "movie#index"
-
+  get '/movies', to: "movies#index"
+  get '/movies/top5', to: "movies#top5"
+  resources :movie_users, only:[:create]
 end
