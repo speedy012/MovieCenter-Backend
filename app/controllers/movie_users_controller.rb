@@ -1,4 +1,8 @@
 class MovieUsersController < ApplicationController
+  def index
+    mus = MovieUser.all
+    render json: mus
+  end
 
   def update
     # byebug
