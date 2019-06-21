@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/signup', to:  "users#create"
   get '/movies', to: "movies#index"
   get '/movies/top5', to: "movies#top5"
+  get '/movie_users', to: "movie_users#index"
   patch '/movie_users', to: "movie_users#update"
   delete '/movie_users/:id', to: "movie_users#destroy"
 end
